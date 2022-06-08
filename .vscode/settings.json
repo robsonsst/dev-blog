@@ -1,0 +1,19 @@
+{
+  "json.schemas": [
+  
+  ],
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+  "editor.formatOnSave": true,
+  "diffEditor.wordWrap": "on",
+  "workbench.colorCustomizations": {
+  "editorBracketHighlight.foreground1": "#ffff00"
+  },
+  "cSpell.words": [
+    "Carregou",
+    "detalhes",
+    "Entypo",
+    "Página",
+    "Procurando"
+  ],
+  
+}
