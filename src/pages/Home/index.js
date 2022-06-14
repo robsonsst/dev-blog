@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 
 import { Feather } from '@expo/vector-icons';
+import * as Animatable from 'react-native-animatable';
 
 import api from '../../services/api';
 import { getFavorite, setFavorite } from '../../services/favorite';
@@ -18,10 +19,13 @@ import CategoryItem from '../../components/CategoryItem';
 import FavoritePost from '../../components/FavoritePost';
 import PostItem from '../../components/PostItem';
 
+const FlatListAnimated = Animatable.createAnimatableComponent(FlatList);
+
 export default function Home({ navigation }) {
   const [categories, setCategories] = useState([]);
   const [favCategory, setFavCategory] = useState([]);
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function loadData() {
@@ -44,11 +48,15 @@ export default function Home({ navigation }) {
   }, []);
 
   async function getListPosts() {
+    setLoading(true);
+
     const response = await api.get(
       'api/posts?populate=cover&sort=createdAt:desc'
     );
 
     setPosts(response.data.data);
+
+    setLoading(false);
   }
 
   async function handleFavorite(id) {
@@ -61,14 +69,16 @@ export default function Home({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.name}>DevBlog</Text>
+        <Animatable.Text style={styles.name} animation='fadeInLeft'>DevBlog</Animatable.Text>
 
         <TouchableOpacity onPress={() => navigation.navigate('Search')}>
           <Feather name="search" size={24} color="#FFF" />
         </TouchableOpacity>
       </View>
 
-      <FlatList
+      <FlatListAnimated
+        animation="flipInX"
+        delay={500}
         showsHorizontalScrollIndicator={false}
         horizontal={true}
         contentContainerStyle={{ paddingRight: 12 }}
@@ -102,12 +112,14 @@ export default function Home({ navigation }) {
           Conteúdos em alta
         </Text>
 
-        <FlatList
+        <FlatList          
           style={{ flex: 1, paddingHorizontal: 18 }}
           showsVerticalScrollIndicator={false}
           data={posts}
           keyExtractor={(item) => String(item.id)}
           renderItem={({ item }) => <PostItem data={item} />}
+          refreshing={loading}
+          onRefresh={() => getListPosts()}
         />
       </View>
     </SafeAreaView>

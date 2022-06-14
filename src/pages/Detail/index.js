@@ -76,6 +76,7 @@ export default function Detail() {
     }
   }
 
+  //Abre modal com o link
   function handleOpenLink(link) {
     setModalVisible(true);
     setOpenLink(link);
