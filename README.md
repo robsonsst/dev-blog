@@ -1,12 +1,14 @@
 # Blog para Devs 📱
 
-<div align='center'> 
+<div align='center' style = 'flex-direction: column' > 
   <img height='460' width= '300' src = './assets/dev-blog.gif'>
 
-  <img align = 'center' alt = 'react-native' height = '30' width = '100' src = 'https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB'>
-  <img align = 'center' alt = 'expo' height = '30' width = '80' src = 'https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37'>
-  <img align = 'center' alt = 'javascript' height = '30' width = '100' src = 'https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E'>      
-  <img align = 'center' alt = 'javascript' height = '30' width = '100' src = 'https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white'>  
+  <div style = 'flex-direction: row'>
+    <img align = 'center' alt = 'react-native' height = '30' width = '100' src = 'https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB'>
+    <img align = 'center' alt = 'expo' height = '30' width = '80' src = 'https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37'>
+    <img align = 'center' alt = 'javascript' height = '30' width = '100' src = 'https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E'>      
+    <img align = 'center' alt = 'javascript' height = '30' width = '100' src = 'https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white'>  
+  </div>
 </div>
 
 ## Sobre 📖
