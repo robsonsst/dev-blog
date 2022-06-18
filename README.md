@@ -60,4 +60,4 @@ Inicializar o aplicativo:
 
 ## License 📑
 
-Este projeto está sob a Licença Apache 2.0. Veja o arquivo [LICENSE]('/LICENSE.md') para mais detalhes
+Este projeto está sob a Licença Apache 2.0. Veja o arquivo [LICENSE]('/LICENSE') para mais detalhes
