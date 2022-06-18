@@ -59,7 +59,7 @@ export default function Detail() {
 
           ${post?.attributes?.description}
 
-          Vi lá no app DevBlog!          
+          Vi lá no app DevBlog!           
         `,
       });
       if (result.action === Share.sharedAction) {
