@@ -40,7 +40,7 @@ Abra outro terminal navegue até o diretório do backend:
   $ cd backend-dev-blog
 ```
 
-Instale as dependências no terminal do frontend e backend:
+Instale as dependências pelo terminal do frontend e backend:
 
 ```bash
   $ npm install
@@ -58,6 +58,6 @@ Inicializar o aplicativo:
   $ npm run develop
 ```
 
-## License 📑
+## Licença 📑
 
 Este projeto está sob a Licença Apache 2.0. Veja o arquivo [LICENSE]('/LICENSE') para mais detalhes
